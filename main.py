@@ -51,7 +51,7 @@ docker03_env_ok = "ZG9uJ3QgdHJ5IHRvIG91dHNtYXJ0IG1lIHlvdW5nIHN0dWRlbnQ=" in json
 print_result("2.2", docker03_network_ok and docker03_env_ok)
 score += 1 if docker03_network_ok and docker03_env_ok else 0
 
-image_created = run_docker_command("docker images -q superImage:latest")
+image_created = run_docker_command("docker images -q superimage:latest")
 print_result("3.1", image_created is not None and image_created != "")
 score += 1 if image_created is not None and image_created != "" else 0
 
